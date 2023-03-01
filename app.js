@@ -3,6 +3,7 @@ const errorMsg = document.querySelector(".error-msg");
 let searchQuery = "random";
 let pageIndex = 1;
 const loader = document.querySelector(".loader");
+const scrollToTop = document.querySelector(".scroll-to-top");
 
 async function FetchData() {
   try {
@@ -91,6 +92,7 @@ const form = document.querySelector("form");
 function handleSearch(e) {
   e.preventDefault();
 
+  imagesList.textContent = "";
   if (input.value === "") {
     errorMsg.textContent =
       "Veuillez entrer du texte avant de soumettre une recherche";
@@ -98,11 +100,29 @@ function handleSearch(e) {
   } else {
     errorMsg.textContent = "";
     loader.style.display = "flex";
+
     //   On change la valeur de searchQuery par celle de l'utilisateur
     searchQuery = input.value;
     //   On déclenche FetchData sur la recherche de l'utilisateur
+    pageIndex = 1;
     FetchData();
   }
 }
 // On déclenche l'évènement submit sur le formulaire, en appliquant la fonction Handlsubmit
 form.addEventListener("submit", handleSearch);
+
+function toTheTop(e) {
+  e.preventDefault();
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+scrollToTop.addEventListener("click", toTheTop);
+
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > 700) {
+    scrollToTop.style.display = "block";
+  } else {
+    scrollToTop.style.display = "none";
+  }
+});

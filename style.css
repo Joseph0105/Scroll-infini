@@ -30,6 +30,7 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  display: none;
   cursor: pointer;
 }
 .scroll-to-top img {
