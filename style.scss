@@ -1,4 +1,3 @@
-@import url(./import_code/contact_box.css);
 *,
 ::before,
 ::after {
@@ -6,14 +5,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   min-height: 100vh;
   background: #f1f1f1;
   font-family: Arial, Helvetica, sans-serif;
   padding: clamp(20px, 5vw, 50px) 20px 20px;
 }
-
 .scroll-to-top {
   width: 40px;
   height: 40px;
@@ -26,38 +23,39 @@ body {
   bottom: 30px;
   right: 30px;
   cursor: pointer;
-}
-.scroll-to-top img {
-  width: 80%;
+  img {
+    width: 80%;
+  }
 }
 
 h1 {
   text-align: center;
   font-weight: 300;
   font-family: Raleway, sans-serif;
-}
-h1 span {
-  font-weight: bold;
+  span {
+    font-weight: bold;
+  }
 }
 
 form {
   padding: 50px 0 50px 0;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-form p {
-  padding-bottom: 5px;
-  font-family: Raeway, sans-serif;
-  font-size: 15px;
-}
-form input {
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-radius: 3px;
-  box-shadow: 0px 5px 5px #a7a7a7;
+  p {
+    padding-bottom: 5px;
+    font-family: Raeway, sans-serif;
+    font-size: 15px;
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 5px 5px #a7a7a7;
+  }
 }
 
 .loader {
@@ -89,5 +87,4 @@ form input {
     transform: translateY(10px);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
+@import url(./import_code/contact_box.css);
