@@ -1,12 +1,18 @@
 .contact-box {
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .contact-title {
   text-align: center;
   font-weight: 400;
   font-family: Raleway, sans-serif;
   margin-bottom: 20px;
+  align-self: center;
 }
 .contact-title span {
   font-weight: 600;
@@ -23,6 +29,7 @@
   margin-left: 20px;
 }
 .contact-link img {
+  align-self: center;
   width: 30px;
   height: 30px;
 }

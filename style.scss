@@ -71,7 +71,7 @@ form {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 250px;
-  margin: 0 auto;
+  //   margin: 0 auto;
   img {
     width: 100%;
     height: 100%;
@@ -81,6 +81,7 @@ form {
 .error-msg {
   font-size: 18px;
   margin: 10px 0;
+  text-align: center;
 }
 .infinite-marker {
   height: 10px;
