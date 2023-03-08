@@ -103,7 +103,7 @@ function handleSearch(e) {
 
     //   On change la valeur de searchQuery par celle de l'utilisateur
     searchQuery = input.value;
-    //   On déclenche FetchData sur la recherche de l'utilisateur
+    //   On déclenche FetchData sur la recherche de l'utilisateur et on remet page index à 1
     pageIndex = 1;
     FetchData();
   }
@@ -111,13 +111,13 @@ function handleSearch(e) {
 // On déclenche l'évènement submit sur le formulaire, en appliquant la fonction Handlsubmit
 form.addEventListener("submit", handleSearch);
 
+scrollToTop.addEventListener("click", toTheTop);
+
 function toTheTop(e) {
   e.preventDefault();
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-scrollToTop.addEventListener("click", toTheTop);
 
 window.addEventListener("scroll", function () {
   if (window.pageYOffset > 700) {
@@ -126,3 +126,5 @@ window.addEventListener("scroll", function () {
     scrollToTop.style.display = "none";
   }
 });
+
+// Pas de fonction fléché avec les addevenlistener, ça pose des soucis quand on veut les remove avec des framework
