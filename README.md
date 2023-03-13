@@ -1,4 +1,4 @@
-Bienvenue dans ce projet passionnant de codage d'un scroll infini !
+# Bienvenue dans ce projet passionnant de codage d'un scroll infini !
 
 Le scroll infini est un élément de conception web très courant, et dans ce projet, nous allons explorer comment le coder. Nous utiliserons l'API de la banque d'images Unsplash pour intégrer un système de recherche et de scroll infini.
 
